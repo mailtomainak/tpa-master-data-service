@@ -1,0 +1,25 @@
+{
+  "name": "tpa-master-data-service",
+  "version": "1.0.0",
+  "description": "Is responsible for returning the master data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailtomainak/tpa-master-data-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mailtomainak/tpa-master-data-service/issues"
+  },
+  "homepage": "https://github.com/mailtomainak/tpa-master-data-service#readme",
+  "dependencies": {
+    "mongoose": "^5.3.13",
+    "restify": "^7.2.3",
+    "restify-cors-middleware": "^1.1.1",
+    "restify-errors": "^6.1.1"
+  }
+}
