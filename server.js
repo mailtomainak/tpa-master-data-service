@@ -24,7 +24,7 @@ const cors = corsMiddleware({
   restifyPlugins.fullResponse()
   );
   
-
+server.get('/',(req,res,next)=>(res.send(200,'API For TPA MDM App')))
 server.get('/api/mdm/hospitals',controllers.fetchHospitalNames);
 
 server.listen(config.port,()=>{    
