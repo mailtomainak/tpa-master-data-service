@@ -25,7 +25,7 @@ const cors = corsMiddleware({
   );
   
 server.get('/',(req,res,next)=>(res.send(200,'API For TPA MDM App')))
-server.get('/api/mdm/hospitals',controllers.fetchHospitalNames);
+server.get('/api/mdm/hospitals/:searchParam',controllers.fetchHospitalNames);
 
 server.listen(config.port,()=>{    
     mongoose.Promise = global.Promise;

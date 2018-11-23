@@ -2,11 +2,11 @@
  const error = require('./errors');
 const Hospital = require('../schemas/hospital_name_schema');
 
-exports.fetchHospitalNames = (req,res,next) =>{
-    Hospital.find({'type':'HOSPITAL_NAMES'},(error,data)=>{
+exports.fetchHospitalNames = (req,res,next) =>{   
+    Hospital.find({'type':'HOSPITAL_NAMES',hospital_name : new RegExp(req.params.searchParam, 'i')},(error,data)=>{
       
         if(error){
-           return next(
+           next(
             error.serverError
            )
         }
